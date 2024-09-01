@@ -124,12 +124,11 @@ local ColorPicker = VisualsTab:CreateColorPicker({
     end,
 })
 
-local ESPSection = VisualsTab:CreateSection("ESP")
 
 -- Box ESP
 local ESPBoxToggleValue = false
 
-local Toggle = ESPSection:CreateToggle({
+local Toggle = VisualsTab:CreateToggle({
     Name = "Box",
     CurrentValue = false,
     Flag = "ToggleBox",
@@ -158,7 +157,7 @@ local Toggle = ESPSection:CreateToggle({
 --- ESP Tracer
 local ESPTracerToggleValue = false
 
-local Toggle = ESPSection:CreateToggle({
+local Toggle = VisualsTab:CreateToggle({
     Name = "Tracer",
     CurrentValue = false,
     Flag = "ToggleTracer",
@@ -183,7 +182,7 @@ local Toggle = ESPSection:CreateToggle({
 -- Health bar ESP
 local ESPHealthBarToggleValue = false
 
-local Toggle = ESPSection:CreateToggle({
+local Toggle = VisualsTab:CreateToggle({
     Name = "Health Bar",
     CurrentValue = false,
     Flag = "ToggleHealthBar",
@@ -212,7 +211,7 @@ local Toggle = ESPSection:CreateToggle({
 -- Skeleton ESP
 local ESPSkeletonToggleValue = false
 
-local Toggle = ESPSection:CreateToggle({
+local Toggle = VisualsTab:CreateToggle({
     Name = "Skeleton",
     CurrentValue = false,
     Flag = "ToggleSkeleton",
@@ -241,7 +240,7 @@ local Toggle = ESPSection:CreateToggle({
 -- Box ESP
 local ESPBoxToggleValue = false
 
-local Toggle = ESPSection:CreateToggle({
+local Toggle = VisualsTab:CreateToggle({
     Name = "Box",
     CurrentValue = false,
     Flag = "ToggleBox",
@@ -270,7 +269,7 @@ local Toggle = ESPSection:CreateToggle({
 -- Box filled ESP
 local ESPBoxFilledToggleValue = false
 
-local Toggle = ESPSection:CreateToggle({
+local Toggle = VisualsTab:CreateToggle({
     Name = "Box Filled",
     CurrentValue = false,
     Flag = "ToggleBoxFilled",
