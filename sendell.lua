@@ -155,12 +155,12 @@ local Toggle = ESPSection:CreateToggle({
     end,
 })
 
--- Tracer ESP
+--- ESP Tracer
 local ESPTracerToggleValue = false
 
 local Toggle = ESPSection:CreateToggle({
     Name = "Tracer",
-        CurrentValue = false,
+    CurrentValue = false,
     Flag = "ToggleTracer",
     Callback = function(Value)
         ESPTracerToggleValue = Value
@@ -230,6 +230,35 @@ local Toggle = ESPSection:CreateToggle({
                     for _, line in pairs(player.Character.HumanoidRootPart:GetDescendants()) do
                         if line:IsA("Line") then
                             line:Destroy()
+                        end
+                    end
+                end
+            end
+        end
+    end,
+})
+
+-- Box ESP
+local ESPBoxToggleValue = false
+
+local Toggle = ESPSection:CreateToggle({
+    Name = "Box",
+    CurrentValue = false,
+    Flag = "ToggleBox",
+    Callback = function(Value)
+        ESPBoxToggleValue = Value
+        if Value then
+            for _, player in pairs(game.Players:GetPlayers()) do
+                if player ~= game.Players.LocalPlayer then
+                    drawBox(player, ESPColor)
+                end
+            end
+        else
+            for _, player in pairs(game.Players:GetPlayers()) do
+                if player ~= game.Players.LocalPlayer then
+                    for _, adornment in pairs(player.Character.HumanoidRootPart:GetDescendants()) do
+                        if adornment:IsA("BoxHandleAdornment") then
+                            adornment:Destroy()
                         end
                     end
                 end
